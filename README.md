@@ -1,7 +1,7 @@
 # Campus IT Support System
-**Powered by Praisetech**
+**Chinhoyi University of Technology**
 
-A modern, secure, and user-friendly web application for campus network and IT support services.
+A modern, secure, and user-friendly web application for campus network and IT support services at Chinhoyi University of Technology (CUT).
 
 ## 🚀 Features
 
@@ -18,18 +18,20 @@ A modern, secure, and user-friendly web application for campus network and IT su
 Elearning web/
 ├── assets/
 │   ├── css/
-│   │   ├── styles.css          # Main styles
+│   │   ├── styles.css          # Main styles with CUT branding
 │   │   ├── login.css           # Login page styles
 │   │   └── dashboard.css       # Dashboard styles
 │   ├── js/
 │   │   ├── main.js             # Main JavaScript
 │   │   ├── login.js            # Login functionality
-│   │   └── dashboard.js        # Dashboard functionality
+│   │   ├── dashboard.js        # Dashboard functionality
+│   │   └── contact.js          # Contact form functionality
 │   └── images/                 # All images and assets
 ├── config/
-│   └── database.php            # Database configuration
+│   ├── database.php            # Database configuration
+│   └── campus_db_updated.sql   # Enhanced database schema
 ├── includes/
-│   ├── Database.php            # Database connection class
+│   ├── Database.php            # Secure database connection class
 │   ├── Auth.php                # Authentication system
 │   ├── login.php               # Login handler
 │   ├── verify.php              # Token verification
@@ -37,10 +39,16 @@ Elearning web/
 │   └── logout.php              # Logout handler
 ├── pages/
 │   ├── index.html              # Home page
+│   ├── about.html              # About page
 │   ├── login.html              # Login page
 │   ├── dashboard.html          # User dashboard
+│   ├── project-overview.html   # Project overview
+│   ├── contact.html            # Contact & FAQ page
 │   └── [other pages...]        # Additional pages
-└── admin/                      # Admin panel (future)
+└── admin/                      # Admin panel
+    ├── index.php               # Admin dashboard
+    ├── login.php               # Admin login
+    └── logout.php              # Admin logout
 ```
 
 ## 🛠️ Installation
@@ -131,14 +139,16 @@ CREATE TABLE users (
 ## 📞 Support
 
 For technical support or questions about this system, please contact:
-- **Developer**: Praisetech
-- **Email**: [Your contact email]
+- **Institution**: Chinhoyi University of Technology
+- **Department**: ICT Department
+- **Email**: ictsupport@cut.ac.zw
+- **Phone**: +263 67 212 9451
 - **Project**: Campus IT Support System
 
 ## 📄 License
 
-© 2025 Praisetech - Campus IT Support System. All rights reserved.
+© 2025 Chinhoyi University of Technology - Campus IT Support System. All rights reserved.
 
 ---
 
-**Built with ❤️ by Praisetech**
+**Built for Chinhoyi University of Technology with ❤️**
