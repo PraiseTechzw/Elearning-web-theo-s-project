@@ -1,0 +1,36 @@
+{
+  "name": "cut-campus-it-support",
+  "version": "1.0.0",
+  "description": "Campus IT Support System for Chinhoyi University of Technology",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 8080 -o",
+    "build": "echo 'Building project...' && mkdir -p dist && cp -r pages dist/ && cp -r assets dist/ && cp -r config dist/ && cp -r includes dist/ && cp -r admin dist/ && cp *.html dist/ 2>/dev/null || true && cp *.php dist/ 2>/dev/null || true",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "keywords": [
+    "campus",
+    "it-support",
+    "university",
+    "chinhoyi",
+    "technology",
+    "education"
+  ],
+  "author": "Chinhoyi University of Technology",
+  "license": "MIT",
+  "homepage": "https://chinhoyi-university.github.io/cut-campus-it-support",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chinhoyi-university/cut-campus-it-support.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chinhoyi-university/cut-campus-it-support/issues"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "gh-pages": "^6.1.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

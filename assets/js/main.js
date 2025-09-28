@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add form enhancements
     addFormEnhancements();
+    
+    // Add header enhancements
+    addHeaderEnhancements();
 });
 
 function initializeApp() {
@@ -48,19 +51,14 @@ function addSmoothScrolling() {
 }
 
 function addMobileMenu() {
-    // Create mobile menu button
+    // Find existing mobile menu button
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const nav = document.querySelector('nav');
-    if (nav) {
-        const mobileMenuBtn = document.createElement('button');
-        mobileMenuBtn.className = 'mobile-menu-btn';
-        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-        mobileMenuBtn.setAttribute('aria-label', 'Toggle mobile menu');
-        
-        // Insert before nav
-        nav.parentNode.insertBefore(mobileMenuBtn, nav);
-        
+    
+    if (mobileMenuBtn && nav) {
         // Add click handler
-        mobileMenuBtn.addEventListener('click', function() {
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
             nav.classList.toggle('mobile-open');
             this.classList.toggle('active');
         });
@@ -71,6 +69,15 @@ function addMobileMenu() {
                 nav.classList.remove('mobile-open');
                 mobileMenuBtn.classList.remove('active');
             }
+        });
+        
+        // Close menu when clicking on nav links
+        const navLinks = nav.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('mobile-open');
+                mobileMenuBtn.classList.remove('active');
+            });
         });
     }
 }
@@ -131,8 +138,76 @@ function formatTime(date) {
     });
 }
 
+// Header enhancement functions
+function addHeaderEnhancements() {
+    // Add scroll effect to header
+    addHeaderScrollEffect();
+    
+    
+}
+
+function addHeaderScrollEffect() {
+    const header = document.querySelector('header');
+    if (!header) return;
+    
+    let lastScrollY = window.scrollY;
+    
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+        
+        if (currentScrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        
+        lastScrollY = currentScrollY;
+    });
+}
+
+function addSearchFunctionality() {
+    const searchInput = document.querySelector('.header-search input');
+    if (!searchInput) return;
+    
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            const query = this.value.trim();
+            if (query) {
+                performSearch(query);
+            }
+        }
+    });
+    
+    // Add search suggestions (simplified)
+    searchInput.addEventListener('input', function() {
+        const query = this.value.trim();
+        if (query.length > 2) {
+            showSearchSuggestions(query);
+        } else {
+            hideSearchSuggestions();
+        }
+    });
+}
+
+function performSearch(query) {
+    console.log('Searching for:', query);
+    // In a real application, this would make an API call
+    showNotification(`Searching for: ${query}`, 'info');
+}
+
+function showSearchSuggestions(query) {
+    // This would typically show a dropdown with suggestions
+    console.log('Showing suggestions for:', query);
+}
+
+function hideSearchSuggestions() {
+    // Hide search suggestions
+    console.log('Hiding suggestions');
+}
+
+
 // Export functions for use in other scripts
-window.PraisetechApp = {
+window.CUTApp = {
     showNotification,
     formatDate,
     formatTime
