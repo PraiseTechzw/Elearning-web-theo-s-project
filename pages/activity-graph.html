@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Activity Tracker</title>
+  <link rel="stylesheet" href="activity-graph.css" />
+</head>
+<body>
+  <header>
+    <h1>Campus Network Activity Tracker</h1>
+  </header>
+
+  <main>
+    <section class="graph-section">
+      <h2>Weekly Engagement</h2>
+      <div class="graph-bar" id="activityBar"></div>
+      <p id="activityCount">Visits: 0</p>
+      <button onclick="trackActivity()">Simulate Activity</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Chinhoyi University of Technology</p>
+  </footer>
+
+  <script>
+    // Initialize or update visit count
+    let activityCount = localStorage.getItem('activityCount') || 0;
+    activityCount++;
+    localStorage.setItem('activityCount', activityCount);
+
+    // Update UI
+    document.getElementById('activityCount').textContent = `Visits: ${activityCount}`;
+    document.getElementById('activityBar').style.width = `${activityCount * 10}px`;
+
+    // Simulate activity
+    function trackActivity() {
+      activityCount++;
+      localStorage.setItem('activityCount', activityCount);
+      document.getElementById('activityCount').textContent = `Visits: ${activityCount}`;
+      document.getElementById('activityBar').style.width = `${activityCount * 10}px`;
+    }
+  </script>
+</body>
+</html>

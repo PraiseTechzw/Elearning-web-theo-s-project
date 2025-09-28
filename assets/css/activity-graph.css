@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6fa;
+  color: #333;
+}
+
+header {
+  background-color: #004080;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.graph-section {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.graph-bar {
+  height: 30px;
+  background-color: #0066cc;
+  margin: 20px 0;
+  transition: width 0.3s ease;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003060;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #f2f2f2;
+}

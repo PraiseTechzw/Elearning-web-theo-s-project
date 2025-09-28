@@ -1,0 +1,112 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f8fc;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+/* Home Button */
+.home-button {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.home-button a {
+  background-color: #0055aa;
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.home-button a:hover {
+  background-color: #003f7f;
+}
+
+/* Main Content */
+main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Section Styling */
+.module {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 6px solid #0055aa;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.module h2 {
+  color: #0055aa;
+  margin-bottom: 10px;
+}
+
+.module ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.module ul li {
+  margin-bottom: 8px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #e6f0ff;
+  color: #003366;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #666;
+}
