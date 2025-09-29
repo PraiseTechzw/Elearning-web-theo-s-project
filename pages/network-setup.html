@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Setup - Chinhoyi University of Technology IT Support</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/network-setup.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="../assets/images/CUT_LOG-removebg-preview.png" alt="CUT Logo">
+      <span class="brand">Chinhoyi University of Technology</span>
+    </div>
+    
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href="project-overview.html"><i class="fas fa-project-diagram"></i> Project Overview</a></li>
+        <li class="dropdown">
+          <a href="#"><i class="fas fa-cogs"></i> Project Details <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="activity-graph.html"><i class="fas fa-chart-line"></i> Weekly Logs</a></li>
+            <li><a href="network-setup.html" class="active"><i class="fas fa-network-wired"></i> Network Setup</a></li>
+            <li><a href="hardware-support.html"><i class="fas fa-tools"></i> Hardware Support</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="user-training.html"><i class="fas fa-graduation-cap"></i> User Resources <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="user-training.html"><i class="fas fa-book"></i> User Training</a></li>
+            <li><a href="#"><i class="fas fa-wrench"></i> Tools & Resources</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#"><i class="fas fa-link"></i> Connect <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact / FAQ</a></li>
+            <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    
+    <a href="login.html" class="login-btn">
+      <i class="fas fa-sign-in-alt"></i> Student/Staff Login
+    </a>
+    
+    <button class="mobile-menu-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <main class="network-main">
+    <div class="network-hero">
+      <div class="container">
+        <h1><i class="fas fa-network-wired"></i> Network Setup & Configuration</h1>
+        <p>Educational network design and hands-on learning environment</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="network-dashboard">
+        <div class="objectives-section">
+          <h2><i class="fas fa-target"></i> Educational Objectives</h2>
+          <div class="objectives-grid">
+            <div class="objective-card">
+              <div class="objective-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3>Enterprise Network Design</h3>
+              <p>Learn enterprise network design principles and segmentation strategies</p>
+              <a href="https://www.youtube.com/watch?v=3q-ULiO_tow" target="_blank" class="btn btn-outline">
+                <i class="fas fa-play"></i> Watch Tutorial
+              </a>
+            </div>
+
+            <div class="objective-card">
+              <div class="objective-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h3>Real-World Tools</h3>
+              <p>Expose students to industry-standard tools and configurations</p>
+              <a href="https://www.youtube.com/watch?v=Ub7WHBV9pGo" target="_blank" class="btn btn-outline">
+                <i class="fas fa-play"></i> Watch Tutorial
+              </a>
+            </div>
+
+            <div class="objective-card">
+              <div class="objective-icon">
+                <i class="fas fa-flask"></i>
+              </div>
+              <h3>Hands-on Learning</h3>
+              <p>Encourage experimentation in a safe, controlled environment</p>
+              <a href="https://www.youtube.com/watch?v=XLdasRhVO6A" target="_blank" class="btn btn-outline">
+                <i class="fas fa-play"></i> Watch Tutorial
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="network-simulator">
+          <h2><i class="fas fa-desktop"></i> Network Simulator</h2>
+          <div class="simulator-container">
+            <div class="network-topology">
+              <div class="network-devices">
+                <div class="device router" data-device="router1">
+                  <i class="fas fa-wifi"></i>
+                  <span>Router 1</span>
+                  <div class="device-status online"></div>
+                </div>
+                
+                <div class="device switch" data-device="switch1">
+                  <i class="fas fa-network-wired"></i>
+                  <span>Switch 1</span>
+                  <div class="device-status online"></div>
+                </div>
+                
+                <div class="device switch" data-device="switch2">
+                  <i class="fas fa-network-wired"></i>
+                  <span>Switch 2</span>
+                  <div class="device-status online"></div>
+                </div>
+                
+                <div class="device server" data-device="server1">
+                  <i class="fas fa-server"></i>
+                  <span>Server 1</span>
+                  <div class="device-status online"></div>
+                </div>
+                
+                <div class="device server" data-device="server2">
+                  <i class="fas fa-server"></i>
+                  <span>Server 2</span>
+                  <div class="device-status online"></div>
+                </div>
+                
+                <div class="device pc" data-device="pc1">
+                  <i class="fas fa-desktop"></i>
+                  <span>PC 1</span>
+                  <div class="device-status online"></div>
+                </div>
+                
+                <div class="device pc" data-device="pc2">
+                  <i class="fas fa-desktop"></i>
+                  <span>PC 2</span>
+                  <div class="device-status online"></div>
+                </div>
+                
+                <div class="device pc" data-device="pc3">
+                  <i class="fas fa-laptop"></i>
+                  <span>Laptop 1</span>
+                  <div class="device-status online"></div>
+                </div>
+              </div>
+              
+              <div class="network-connections">
+                <div class="connection" data-from="router1" data-to="switch1"></div>
+                <div class="connection" data-from="switch1" data-to="switch2"></div>
+                <div class="connection" data-from="switch1" data-to="server1"></div>
+                <div class="connection" data-from="switch1" data-to="pc1"></div>
+                <div class="connection" data-from="switch2" data-to="server2"></div>
+                <div class="connection" data-from="switch2" data-to="pc2"></div>
+                <div class="connection" data-from="switch2" data-to="pc3"></div>
+              </div>
+            </div>
+            
+            <div class="simulator-controls">
+              <button class="btn btn-primary" onclick="simulateNetworkActivity()">
+                <i class="fas fa-play"></i> Simulate Activity
+              </button>
+              <button class="btn btn-secondary" onclick="resetNetwork()">
+                <i class="fas fa-refresh"></i> Reset Network
+              </button>
+              <button class="btn btn-outline" onclick="showNetworkStats()">
+                <i class="fas fa-chart-bar"></i> View Stats
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="network-config">
+          <h2><i class="fas fa-cogs"></i> Configuration Examples</h2>
+          <div class="config-tabs">
+            <button class="tab-btn active" onclick="showConfigTab('routing')">Routing</button>
+            <button class="tab-btn" onclick="showConfigTab('switching')">Switching</button>
+            <button class="tab-btn" onclick="showConfigTab('security')">Security</button>
+          </div>
+          
+          <div class="config-content">
+            <div id="routing-config" class="config-panel active">
+              <h3>Router Configuration</h3>
+              <pre><code>interface GigabitEthernet0/0
+ ip address 192.168.1.1 255.255.255.0
+ no shutdown
+
+interface GigabitEthernet0/1
+ ip address 192.168.2.1 255.255.255.0
+ no shutdown
+
+ip route 0.0.0.0 0.0.0.0 203.0.113.1</code></pre>
+            </div>
+            
+            <div id="switching-config" class="config-panel">
+              <h3>Switch Configuration</h3>
+              <pre><code>vlan 10
+ name STUDENTS
+vlan 20
+ name STAFF
+
+interface range FastEthernet0/1-12
+ switchport mode access
+ switchport access vlan 10
+
+interface range FastEthernet0/13-24
+ switchport mode access
+ switchport access vlan 20</code></pre>
+            </div>
+            
+            <div id="security-config" class="config-panel">
+              <h3>Security Configuration</h3>
+              <pre><code>access-list 100 permit tcp 192.168.1.0 0.0.0.255 any eq 80
+access-list 100 permit tcp 192.168.1.0 0.0.0.255 any eq 443
+access-list 100 deny ip any any
+
+interface GigabitEthernet0/0
+ ip access-group 100 in</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Chinhoyi University of Technology - Campus IT Support System. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/network-setup.js"></script>
+</body>
+</html>

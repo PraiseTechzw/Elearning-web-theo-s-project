@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Training - Chinhoyi University of Technology IT Support</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/user-training.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="../assets/images/CUT_LOG-removebg-preview.png" alt="CUT Logo">
+      <span class="brand">Chinhoyi University of Technology</span>
+    </div>
+    
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href="project-overview.html"><i class="fas fa-project-diagram"></i> Project Overview</a></li>
+        <li class="dropdown">
+          <a href="#"><i class="fas fa-cogs"></i> Project Details <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="activity-graph.html"><i class="fas fa-chart-line"></i> Weekly Logs</a></li>
+            <li><a href="network-setup.html"><i class="fas fa-network-wired"></i> Network Setup</a></li>
+            <li><a href="hardware-support.html"><i class="fas fa-tools"></i> Hardware Support</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="user-training.html" class="active"><i class="fas fa-graduation-cap"></i> User Resources <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="user-training.html" class="active"><i class="fas fa-book"></i> User Training</a></li>
+            <li><a href="#"><i class="fas fa-wrench"></i> Tools & Resources</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#"><i class="fas fa-link"></i> Connect <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact / FAQ</a></li>
+            <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    
+    <a href="login.html" class="login-btn">
+      <i class="fas fa-sign-in-alt"></i> Student/Staff Login
+    </a>
+    
+    <button class="mobile-menu-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <main class="training-main">
+    <div class="training-hero">
+      <div class="container">
+        <h1><i class="fas fa-graduation-cap"></i> User Training Center</h1>
+        <p>Comprehensive training resources for students, faculty, and staff</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="training-dashboard">
+        <div class="training-modules">
+          <h2><i class="fas fa-book"></i> Training Modules</h2>
+          
+          <div class="module-grid">
+            <div class="module-card" data-module="orientation">
+              <div class="module-icon">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+              <h3>New User Orientation</h3>
+              <p>Essential guide for new students and staff</p>
+              <div class="module-progress">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">0% Complete</span>
+              </div>
+              <button class="btn btn-primary" onclick="startModule('orientation')">
+                <i class="fas fa-play"></i> Start Module
+              </button>
+            </div>
+
+            <div class="module-card" data-module="wifi">
+              <div class="module-icon">
+                <i class="fas fa-wifi"></i>
+              </div>
+              <h3>Campus Wi-Fi Setup</h3>
+              <p>Connect to campus wireless networks</p>
+              <div class="module-progress">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">0% Complete</span>
+              </div>
+              <button class="btn btn-primary" onclick="startModule('wifi')">
+                <i class="fas fa-play"></i> Start Module
+              </button>
+            </div>
+
+            <div class="module-card" data-module="security">
+              <div class="module-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Cybersecurity Basics</h3>
+              <p>Stay safe online with best practices</p>
+              <div class="module-progress">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">0% Complete</span>
+              </div>
+              <button class="btn btn-primary" onclick="startModule('security')">
+                <i class="fas fa-play"></i> Start Module
+              </button>
+            </div>
+
+            <div class="module-card" data-module="helpdesk">
+              <div class="module-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+              <h3>Helpdesk & Support</h3>
+              <p>How to get help and submit tickets</p>
+              <div class="module-progress">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">0% Complete</span>
+              </div>
+              <button class="btn btn-primary" onclick="startModule('helpdesk')">
+                <i class="fas fa-play"></i> Start Module
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="training-resources">
+          <h2><i class="fas fa-tools"></i> Quick Resources</h2>
+          
+          <div class="resource-list">
+            <div class="resource-item">
+              <i class="fas fa-download"></i>
+              <div class="resource-content">
+                <h4>Wi-Fi Setup Guide</h4>
+                <p>Step-by-step instructions for connecting to campus Wi-Fi</p>
+                <button class="btn btn-outline" onclick="downloadResource('wifi-guide')">
+                  <i class="fas fa-download"></i> Download PDF
+                </button>
+              </div>
+            </div>
+
+            <div class="resource-item">
+              <i class="fas fa-video"></i>
+              <div class="resource-content">
+                <h4>Video Tutorials</h4>
+                <p>Watch step-by-step video guides</p>
+                <button class="btn btn-outline" onclick="openVideoTutorials()">
+                  <i class="fas fa-play"></i> Watch Videos
+                </button>
+              </div>
+            </div>
+
+            <div class="resource-item">
+              <i class="fas fa-question-circle"></i>
+              <div class="resource-content">
+                <h4>FAQ & Troubleshooting</h4>
+                <p>Common issues and solutions</p>
+                <button class="btn btn-outline" onclick="openFAQ()">
+                  <i class="fas fa-search"></i> Browse FAQ
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="training-progress">
+          <h2><i class="fas fa-chart-pie"></i> Your Progress</h2>
+          
+          <div class="progress-overview">
+            <div class="progress-circle">
+              <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#e2e8f0" stroke-width="8"/>
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#3b82f6" stroke-width="8" 
+                        stroke-dasharray="283" stroke-dashoffset="283" id="progressCircle"/>
+              </svg>
+              <div class="progress-text">
+                <span id="overallProgress">0%</span>
+                <small>Complete</small>
+              </div>
+            </div>
+            
+            <div class="progress-details">
+              <div class="progress-item">
+                <span>Modules Completed</span>
+                <span id="modulesCompleted">0/4</span>
+              </div>
+              <div class="progress-item">
+                <span>Time Spent</span>
+                <span id="timeSpent">0 min</span>
+              </div>
+              <div class="progress-item">
+                <span>Certificates Earned</span>
+                <span id="certificates">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Chinhoyi University of Technology - Campus IT Support System. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/user-training.js"></script>
+</body>
+</html>

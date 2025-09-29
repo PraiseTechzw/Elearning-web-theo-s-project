@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Campus IT Support | Chinhoyi University of Technology</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="../assets/images/CUT_LOG-removebg-preview.png" alt="Campus Logo">
+      <span class="brand">Chinhoyi University of Technology</span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="project-overview.html">Project Overview</a></li>
+        <li class="dropdown">
+          <a href="#">Project Details ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="activity-graph.html">Weekly Logs</a></li>
+            <li><a href="network-setup.html">Network Setup</a></li>
+            <li><a href="hardware-support.html">Hardware Support</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="user-training.html">User Resources ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="user-training.html">User Training</a></li>
+            <li><a href="#">Tools & Resources</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Connect ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="contact.html">Contact / FAQ</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </li>
+        <li><a href="../includes/logout.php" class="logout-btn">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="dashboard-main">
+    <div class="welcome-section">
+      <h1>Welcome to Campus IT Support Dashboard</h1>
+      <p>Empowering students, faculty, and staff with seamless connectivity and reliable technical support.</p>
+    </div>
+
+    <div class="dashboard-grid">
+      <div class="dashboard-card">
+        <div class="card-icon">
+          <i class="fas fa-network-wired"></i>
+        </div>
+        <h3>Network Status</h3>
+        <p>Monitor campus network health and connectivity</p>
+        <a href="network-setup.html" class="card-link">View Details</a>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="card-icon">
+          <i class="fas fa-tools"></i>
+        </div>
+        <h3>Hardware Support</h3>
+        <p>Get help with device setup and maintenance</p>
+        <a href="hardware-support.html" class="card-link">Get Support</a>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="card-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3>Activity Reports</h3>
+        <p>View weekly logs and system activity</p>
+        <a href="activity-graph.html" class="card-link">View Reports</a>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="card-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3>User Training</h3>
+        <p>Access training materials and resources</p>
+        <a href="user-training.html" class="card-link">Start Learning</a>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="card-icon">
+          <i class="fas fa-project-diagram"></i>
+        </div>
+        <h3>Project Overview</h3>
+        <p>Learn about our IT infrastructure projects</p>
+        <a href="project-overview.html" class="card-link">View Projects</a>
+      </div>
+
+      <div class="dashboard-card">
+        <div class="card-icon">
+          <i class="fas fa-question-circle"></i>
+        </div>
+        <h3>Help & Support</h3>
+        <p>Get assistance and find answers to common questions</p>
+        <a href="contact.html" class="card-link">Get Help</a>
+      </div>
+    </div>
+
+    <div class="quick-actions">
+      <h2>Quick Actions</h2>
+      <div class="action-buttons">
+        <button class="action-btn" onclick="reportIssue()">
+          <i class="fas fa-exclamation-triangle"></i>
+          Report Issue
+        </button>
+        <button class="action-btn" onclick="requestSupport()">
+          <i class="fas fa-headset"></i>
+          Request Support
+        </button>
+        <button class="action-btn" onclick="viewTickets()">
+          <i class="fas fa-ticket-alt"></i>
+          View Tickets
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Chinhoyi University of Technology - Campus IT Support System. All rights reserved.</p>
+  </footer>
+
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>
