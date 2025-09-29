@@ -3,67 +3,62 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main, master ]
-  workflow_dispatch: # Allow manual triggering
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  workflow_dispatch:
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-      
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '18'
-        cache: 'npm'
         
     - name: Install dependencies
-      run: |
-        # Install any build tools if needed
-        npm install -g http-server
-        
-    - name: Build project
-      run: |
-        # Create a simple build process
-        echo "Building project..."
-        # Copy all files to dist directory
-        mkdir -p dist
-        cp -r pages dist/
-        cp -r assets dist/
-        cp -r config dist/
-        cp -r includes dist/
-        cp -r admin dist/
-        cp *.html dist/ 2>/dev/null || true
-        cp *.php dist/ 2>/dev/null || true
-        cp *.md dist/ 2>/dev/null || true
-        cp *.json dist/ 2>/dev/null || true
-        cp *.txt dist/ 2>/dev/null || true
-        
-    - name: Setup Pages
-      uses: actions/configure-pages@v4
+      run: npm install
       
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: './dist'
+    - name: Build
+      run: npm run build
+      
+    - name: Deploy to gh-pages
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
         
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+        # Create or switch to gh-pages branch
+        if git show-ref --verify --quiet refs/heads/gh-pages; then
+          git checkout gh-pages
+          git pull origin gh-pages
+        else
+          git checkout --orphan gh-pages
+          git rm -rf .
+        fi
+        
+        # Copy built files
+        cp -r dist/* .
+        cp -r pages .
+        cp -r assets .
+        cp -r config .
+        cp -r includes .
+        cp -r admin .
+        cp *.html . 2>/dev/null || true
+        cp *.php . 2>/dev/null || true
+        cp *.md . 2>/dev/null || true
+        cp *.json . 2>/dev/null || true
+        
+        # Create .nojekyll file
+        echo "" > .nojekyll
+        
+        # Add and commit
+        git add .
+        git commit -m "Deploy: $(date)" || exit 0
+        git push origin gh-pages --force
+        
+        # Switch back to main
+        git checkout main
