@@ -1,138 +1,422 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f4f6f9;
-  color: #333;
+/* Network Setup Page Styles */
+.network-main {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding-top: 80px;
 }
 
-header {
-  background-color: #004080;
+.network-hero {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
   color: white;
-  padding: 20px;
+  padding: 60px 0;
   text-align: center;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2em;
-}
-
-header p {
-  margin-top: 5px;
-  font-size: 1.2em;
-}
-
-main {
-  padding: 30px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.module {
-  background-color: white;
-  padding: 25px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.module h2 {
-  color: #004080;
+.network-hero h1 {
+  font-size: 2.5rem;
   margin-bottom: 15px;
+  font-weight: 700;
 }
 
-.module ul {
-  list-style-type: disc;
-  padding-left: 20px;
+.network-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.module ul li a {
-  color: #0066cc;
-  text-decoration: none;
+.network-dashboard {
+  padding: 40px 0;
 }
 
-.module ul li a:hover {
-  text-decoration: underline;
+.objectives-section h2,
+.network-simulator h2,
+.network-config h2 {
+  color: #1e3a8a;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
+.objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
 }
 
-table th, table td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: left;
-}
-
-table th {
-  background-color: #e0e7ff;
-  color: #004080;
-}
-
-table td a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-table td a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  background-color: #004080;
-  color: white;
+.objective-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 4px solid #3b82f6;
   text-align: center;
-  padding: 15px;
-  font-size: 0.9em;
+}
+
+.objective-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.objective-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 auto 15px;
+}
+
+.objective-card h3 {
+  color: #1e3a8a;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.objective-card p {
+  color: #64748b;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.network-simulator {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.simulator-container {
   position: relative;
-  bottom: 0;
+  min-height: 400px;
+}
+
+.network-topology {
+  position: relative;
   width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  main {
-    padding: 20px;
-  }
+.network-devices {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 
-  header h1 {
-    font-size: 1.5em;
-  }
+.device {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
 
-  header p {
-    font-size: 1em;
-  }
+.device:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
 
-  .module {
-    padding: 20px;
-  }
+.device.router {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-color: #3b82f6;
+}
 
-  table th, table td {
-    font-size: 0.9em;
-  }
+.device.switch {
+  top: 120px;
+  left: 20%;
+  border-color: #10b981;
+}
 
-  .home-button {
+.device.switch:nth-of-type(2) {
+  left: 80%;
+}
+
+.device.server {
+  top: 200px;
+  left: 15%;
+  border-color: #f59e0b;
+}
+
+.device.server:nth-of-type(2) {
+  left: 85%;
+}
+
+.device.pc {
+  top: 280px;
+  left: 10%;
+  border-color: #8b5cf6;
+}
+
+.device.pc:nth-of-type(2) {
+  left: 45%;
+}
+
+.device.pc:nth-of-type(3) {
+  left: 80%;
+}
+
+.device i {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.device.router i { color: #3b82f6; }
+.device.switch i { color: #10b981; }
+.device.server i { color: #f59e0b; }
+.device.pc i { color: #8b5cf6; }
+
+.device span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1e3a8a;
   text-align: center;
-  margin: 20px 0;
 }
 
-.home-button a {
-  background-color: #0066cc;
-  color: white;
+.device-status {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.device-status.online {
+  background: #10b981;
+  animation: pulse 2s infinite;
+}
+
+.device-status.offline {
+  background: #ef4444;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.network-connections {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.connection {
+  position: absolute;
+  height: 2px;
+  background: #3b82f6;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.connection.active {
+  background: #10b981;
+  opacity: 1;
+  animation: dataFlow 2s infinite;
+}
+
+@keyframes dataFlow {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+.simulator-controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.network-config {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.config-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tab-btn {
   padding: 10px 20px;
-  border-radius: 25px;
+  border: none;
+  background: none;
+  color: #64748b;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.tab-btn.active {
+  color: #3b82f6;
+  border-bottom-color: #3b82f6;
+}
+
+.tab-btn:hover {
+  color: #1e3a8a;
+}
+
+.config-content {
+  position: relative;
+}
+
+.config-panel {
+  display: none;
+}
+
+.config-panel.active {
+  display: block;
+}
+
+.config-panel h3 {
+  color: #1e3a8a;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.config-panel pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Button styles */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1em;
-  transition: background-color 0.3s ease;
-  display: inline-block;
+  font-size: 0.9rem;
 }
 
-.home-button a:hover {
-  background-color: #004080;
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+  color: white;
 }
 
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #64748b, #475569);
+  color: white;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(100, 116, 139, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #3b82f6;
+  border: 2px solid #3b82f6;
+}
+
+.btn-outline:hover {
+  background: #3b82f6;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .objectives-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .simulator-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+  
+  .network-topology {
+    height: 300px;
+  }
+  
+  .device {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .device i {
+    font-size: 1.2rem;
+  }
+  
+  .device span {
+    font-size: 0.7rem;
+  }
+  
+  .network-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .network-hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Animation for device interactions */
+@keyframes deviceClick {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.device.clicked {
+  animation: deviceClick 0.3s ease;
 }

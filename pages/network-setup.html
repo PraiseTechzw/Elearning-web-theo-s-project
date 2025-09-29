@@ -1,110 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Learning Network Setup - CUT</title>
-  <link rel="stylesheet" href="network-setup.css" />
- 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Setup - Chinhoyi University of Technology IT Support</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/network-setup.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Chinhoyi University of Technology</h1>
-    <p>Learning-Focused Campus Network & IT Support System</p>
-      <div class="home-button">
-    <a href="index.html">🏠 Home</a>
-  </div>
+    <div class="logo">
+      <img src="../assets/images/CUT_LOG-removebg-preview.png" alt="CUT Logo">
+      <span class="brand">Chinhoyi University of Technology</span>
+    </div>
+    
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href="project-overview.html"><i class="fas fa-project-diagram"></i> Project Overview</a></li>
+        <li class="dropdown">
+          <a href="#"><i class="fas fa-cogs"></i> Project Details <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="activity-graph.html"><i class="fas fa-chart-line"></i> Weekly Logs</a></li>
+            <li><a href="network-setup.html" class="active"><i class="fas fa-network-wired"></i> Network Setup</a></li>
+            <li><a href="hardware-support.html"><i class="fas fa-tools"></i> Hardware Support</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="user-training.html"><i class="fas fa-graduation-cap"></i> User Resources <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="user-training.html"><i class="fas fa-book"></i> User Training</a></li>
+            <li><a href="#"><i class="fas fa-wrench"></i> Tools & Resources</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#"><i class="fas fa-link"></i> Connect <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact / FAQ</a></li>
+            <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    
+    <a href="login.html" class="login-btn">
+      <i class="fas fa-sign-in-alt"></i> Student/Staff Login
+    </a>
+    
+    <button class="mobile-menu-btn">
+      <i class="fas fa-bars"></i>
+    </button>
   </header>
 
- 
+  <main class="network-main">
+    <div class="network-hero">
+      <div class="container">
+        <h1><i class="fas fa-network-wired"></i> Network Setup & Configuration</h1>
+        <p>Educational network design and hands-on learning environment</p>
+      </div>
+    </div>
 
-  <main>
-    <section class="module">
-      <h2>🎯 Educational Objectives</h2>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=3q-ULiO_tow" target="_blank">Teach enterprise network design and segmentation</a></li>
-        <li><a href="https://www.youtube.com/watch?v=Ub7WHBV9pGo" target="_blank">Expose students to real-world tools and configurations</a></li>
-        <li><a href="https://www.youtube.com/watch?v=XLdasRhVO6A" target="_blank">Encourage hands-on experimentation in a safe environment</a></li>
-      </ul>
-    </section>
+    <div class="container">
+      <div class="network-dashboard">
+        <div class="objectives-section">
+          <h2><i class="fas fa-target"></i> Educational Objectives</h2>
+          <div class="objectives-grid">
+            <div class="objective-card">
+              <div class="objective-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3>Enterprise Network Design</h3>
+              <p>Learn enterprise network design principles and segmentation strategies</p>
+              <a href="https://www.youtube.com/watch?v=3q-ULiO_tow" target="_blank" class="btn btn-outline">
+                <i class="fas fa-play"></i> Watch Tutorial
+              </a>
+            </div>
 
-    <section class="module">
-      <h2>🏗️ Modular Network Architecture</h2>
-      <table>
-        <tr><th>Module</th><th>Description</th><th>Learning Focus</th></tr>
-        <tr>
-          <td><a href="https://www.youtube.com/watch?v=Ub7WHBV9pGo" target="_blank">Core Infrastructure</a></td>
-          <td>Fiber, switches, cabling</td>
-          <td>Topology, redundancy</td>
-        </tr>
-        <tr>
-          <td><a href="https://www.youtube.com/watch?v=eoB-mU1t0oM" target="_blank">VLAN Segmentation</a></td>
-          <td>Logical separation</td>
-          <td>Subnetting, access control</td>
-        </tr>
-        <tr>
-          <td><a href="https://www.youtube.com/watch?v=7EN62JmY2Iw" target="_blank">Wireless Deployment</a></td>
-          <td>Wi-Fi 6, SSIDs</td>
-          <td>Authentication, roaming</td>
-        </tr>
-        <tr>
-          <td><a href="https://www.youtube.com/watch?v=BmHfmNj1JMU" target="_blank">Internet Gateway</a></td>
-          <td>ISP, firewall</td>
-          <td>NAT, load balancing</td>
-        </tr>
-        <tr>
-          <td><a href="https://www.youtube.com/watch?v=Ub7WHBV9pGo" target="_blank">Monitoring & Security</a></td>
-          <td>Zabbix, firewalls</td>
-          <td>Threat detection</td>
-        </tr>
-        <tr>
-          <td><a href="https://www.youtube.com/watch?v=eoB-mU1t0oM" target="_blank">Support Systems</a></td>
-          <td>Helpdesk, asset tracking</td>
-          <td>ITIL, workflows</td>
-        </tr>
-      </table>
-    </section>
+            <div class="objective-card">
+              <div class="objective-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h3>Real-World Tools</h3>
+              <p>Expose students to industry-standard tools and configurations</p>
+              <a href="https://www.youtube.com/watch?v=Ub7WHBV9pGo" target="_blank" class="btn btn-outline">
+                <i class="fas fa-play"></i> Watch Tutorial
+              </a>
+            </div>
 
-    <section class="module">
-      <h2>🧪 Student Labs & Simulation Zones</h2>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=Ub7WHBV9pGo" target="_blank">Virtual labs using GNS3 or Packet Tracer</a></li>
-        <li><a href="https://www.youtube.com/watch?v=7EN62JmY2Iw" target="_blank">Wi-Fi configuration and captive portal setup</a></li>
-        <li><a href="https://www.youtube.com/watch?v=BmHfmNj1JMU" target="_blank">Firewall policy writing and testing</a></li>
-        <li><a href="https://www.youtube.com/watch?v=Ub7WHBV9pGo" target="_blank">Monitoring dashboards with real-time traffic</a></li>
-      </ul>
-    </section>
+            <div class="objective-card">
+              <div class="objective-icon">
+                <i class="fas fa-flask"></i>
+              </div>
+              <h3>Hands-on Learning</h3>
+              <p>Encourage experimentation in a safe, controlled environment</p>
+              <a href="https://www.youtube.com/watch?v=XLdasRhVO6A" target="_blank" class="btn btn-outline">
+                <i class="fas fa-play"></i> Watch Tutorial
+              </a>
+            </div>
+          </div>
+        </div>
 
-    <section class="module">
-      <h2>🧑‍🏫 Mentored Roles & Access Levels</h2>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=Ub7WHBV9pGo" target="_blank">Beginner: Read-only access to dashboards</a></li>
-        <li><a href="https://www.youtube.com/watch?v=eoB-mU1t0oM" target="_blank">Intermediate: Configure test VLANs</a></li>
-        <li><a href="https://www.youtube.com/watch?v=7EN62JmY2Iw" target="_blank">Advanced: Deploy live configs under supervision</a></li>
-        <li><a href="https://www.youtube.com/watch?v=XLdasRhVO6A" target="_blank">Mentorship: Guided learning with ICT staff</a></li>
-      </ul>
-    </section>
+        <div class="network-simulator">
+          <h2><i class="fas fa-desktop"></i> Network Simulator</h2>
+          <div class="simulator-container">
+            <div class="network-topology">
+              <div class="network-devices">
+                <div class="device router" data-device="router1">
+                  <i class="fas fa-wifi"></i>
+                  <span>Router 1</span>
+                  <div class="device-status online"></div>
+                </div>
+                
+                <div class="device switch" data-device="switch1">
+                  <i class="fas fa-network-wired"></i>
+                  <span>Switch 1</span>
+                  <div class="device-status online"></div>
+                </div>
+                
+                <div class="device switch" data-device="switch2">
+                  <i class="fas fa-network-wired"></i>
+                  <span>Switch 2</span>
+                  <div class="device-status online"></div>
+                </div>
+                
+                <div class="device server" data-device="server1">
+                  <i class="fas fa-server"></i>
+                  <span>Server 1</span>
+                  <div class="device-status online"></div>
+                </div>
+                
+                <div class="device server" data-device="server2">
+                  <i class="fas fa-server"></i>
+                  <span>Server 2</span>
+                  <div class="device-status online"></div>
+                </div>
+                
+                <div class="device pc" data-device="pc1">
+                  <i class="fas fa-desktop"></i>
+                  <span>PC 1</span>
+                  <div class="device-status online"></div>
+                </div>
+                
+                <div class="device pc" data-device="pc2">
+                  <i class="fas fa-desktop"></i>
+                  <span>PC 2</span>
+                  <div class="device-status online"></div>
+                </div>
+                
+                <div class="device pc" data-device="pc3">
+                  <i class="fas fa-laptop"></i>
+                  <span>Laptop 1</span>
+                  <div class="device-status online"></div>
+                </div>
+              </div>
+              
+              <div class="network-connections">
+                <div class="connection" data-from="router1" data-to="switch1"></div>
+                <div class="connection" data-from="switch1" data-to="switch2"></div>
+                <div class="connection" data-from="switch1" data-to="server1"></div>
+                <div class="connection" data-from="switch1" data-to="pc1"></div>
+                <div class="connection" data-from="switch2" data-to="server2"></div>
+                <div class="connection" data-from="switch2" data-to="pc2"></div>
+                <div class="connection" data-from="switch2" data-to="pc3"></div>
+              </div>
+            </div>
+            
+            <div class="simulator-controls">
+              <button class="btn btn-primary" onclick="simulateNetworkActivity()">
+                <i class="fas fa-play"></i> Simulate Activity
+              </button>
+              <button class="btn btn-secondary" onclick="resetNetwork()">
+                <i class="fas fa-refresh"></i> Reset Network
+              </button>
+              <button class="btn btn-outline" onclick="showNetworkStats()">
+                <i class="fas fa-chart-bar"></i> View Stats
+              </button>
+            </div>
+          </div>
+        </div>
 
-    <section class="module">
-      <h2>📚 Documentation & Resources</h2>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=XLdasRhVO6A" target="_blank">Interactive wiki with step-by-step guides</a></li>
-        <li><a href="https://www.youtube.com/watch?v=Ub7WHBV9pGo" target="_blank">Video tutorials and recorded walkthroughs</a></li>
-        <li><a href="https://www.youtube.com/watch?v=3q-ULiO_tow" target="_blank">Internal certification badges for module completion</a></li>
-      </ul>
-    </section>
+        <div class="network-config">
+          <h2><i class="fas fa-cogs"></i> Configuration Examples</h2>
+          <div class="config-tabs">
+            <button class="tab-btn active" onclick="showConfigTab('routing')">Routing</button>
+            <button class="tab-btn" onclick="showConfigTab('switching')">Switching</button>
+            <button class="tab-btn" onclick="showConfigTab('security')">Security</button>
+          </div>
+          
+          <div class="config-content">
+            <div id="routing-config" class="config-panel active">
+              <h3>Router Configuration</h3>
+              <pre><code>interface GigabitEthernet0/0
+ ip address 192.168.1.1 255.255.255.0
+ no shutdown
 
-    <section class="module">
-      <h2>🛠️ Sandbox Environment</h2>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=eoB-mU1t0oM" target="_blank">Isolated VLAN for safe experimentation</a></li>
-        <li><a href="https://www.youtube.com/watch?v=Ub7WHBV9pGo" target="_blank">Daily resets for fresh practice</a></li>
-        <li><a href="https://www.youtube.com/watch?v=XLdasRhVO6A" target="_blank">Simulated outages for troubleshooting drills</a></li>
-      </ul>
-    </section>
+interface GigabitEthernet0/1
+ ip address 192.168.2.1 255.255.255.0
+ no shutdown
 
-    <section class="module">
-      <h2>🚀 Career Readiness</h2>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=Ub7WHBV9pGo" target="_blank">Hands-on experience in network design and support</a></li>
-        <li>
+ip route 0.0.0.0 0.0.0.0 203.0.113.1</code></pre>
+            </div>
+            
+            <div id="switching-config" class="config-panel">
+              <h3>Switch Configuration</h3>
+              <pre><code>vlan 10
+ name STUDENTS
+vlan 20
+ name STAFF
+
+interface range FastEthernet0/1-12
+ switchport mode access
+ switchport access vlan 10
+
+interface range FastEthernet0/13-24
+ switchport mode access
+ switchport access vlan 20</code></pre>
+            </div>
+            
+            <div id="security-config" class="config-panel">
+              <h3>Security Configuration</h3>
+              <pre><code>access-list 100 permit tcp 192.168.1.0 0.0.0.255 any eq 80
+access-list 100 permit tcp 192.168.1.0 0.0.0.255 any eq 443
+access-list 100 deny ip any any
+
+interface GigabitEthernet0/0
+ ip access-group 100 in</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Chinhoyi University of Technology - Campus IT Support System. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/network-setup.js"></script>
+</body>
+</html>
