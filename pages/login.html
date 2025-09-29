@@ -188,6 +188,12 @@
           </div>
         </div>
         
+        <div class="admin-link">
+          <a href="../admin/login.php" class="admin-login-link">
+            <i class="fas fa-shield-alt"></i> Admin Login
+          </a>
+        </div>
+        
         <a href="index.html" class="back-link">
           <i class="fas fa-arrow-left"></i> Back to Home
         </a>
@@ -252,5 +258,20 @@
 
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/login.js"></script>
+  
+  <script>
+    // Handle URL parameters for verification messages
+    const urlParams = new URLSearchParams(window.location.search);
+    const verified = urlParams.get('verified');
+    const error = urlParams.get('error');
+    
+    if (verified === '1') {
+      showMessage('Email verified successfully! You can now login.', 'success');
+    }
+    
+    if (error) {
+      showMessage(decodeURIComponent(error), 'error');
+    }
+  </script>
 </body>
 </html>

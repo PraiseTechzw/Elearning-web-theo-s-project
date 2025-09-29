@@ -1,10 +1,14 @@
 <?php
 /**
  * Admin Logout
- * Praisetech - Campus IT Support System
+ * Chinhoyi University of Technology - Campus IT Support System
  */
 
-session_start();
-session_destroy();
+require_once __DIR__ . '/../includes/Auth.php';
+
+$auth = new Auth();
+$auth->logout();
+
 header('Location: login.php');
 exit;
+?>

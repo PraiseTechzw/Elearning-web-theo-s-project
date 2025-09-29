@@ -392,6 +392,29 @@
   color: #3b82f6;
 }
 
+.admin-link {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.admin-login-link {
+  color: #dc2626;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  border: 2px solid #dc2626;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.admin-login-link:hover {
+  background: #dc2626;
+  color: white;
+}
+
 /* Messages */
 .message {
   padding: 15px 20px;
